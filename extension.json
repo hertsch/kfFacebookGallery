@@ -1,0 +1,41 @@
+{
+  "name":"FacebookGallery",
+  "guid":"1C8BC2EA-214F-406D-93D8-5162014A1985",
+  "category":"extension",
+  "group":"phpManufaktur",
+  "vendor":"phpManufaktur",
+  "type":"application",
+  "path":"\/extension\/phpmanufaktur\/phpManufaktur\/FacebookGallery",
+  "namespace": "phpManufaktur\\FacebookGallery",
+  "link":{
+    "start":"\/facebookgallery\/exec",
+    "about":"\/facebookgallery\/about"
+  },
+  "release": {
+    "number" : "0.10",
+    "date" : "2013-05-19"
+  },
+  "description": {
+    "en": {
+      "title":"FacebookGallery for the kitFramework",
+      "short": "Show Facebook Galleries within the Content Management System",
+      "long": "Very flexible Gallery, which enable to show any public Facebook foto album within a content page of the used CMS.",
+      "url": "https:\/\/kit2.phpmanufaktur.de"
+    }
+  },
+  "require": {
+    "framework": {
+      "release": "0.18"
+    }
+  },
+  "license":"MIT License",
+  "download": {
+    "availability":"public",
+    "agreement":"free",
+    "github":{
+      "organization":"phpManufaktur",
+      "repository":"kfFacebookGallery"
+    },
+    "url":"https:\/\/github.com\/phpManufaktur\/kfFacebookGallery"
+  }
+}
