@@ -32,3 +32,4 @@ $app->match('/facebookgallery/exec', function () use ($app) {
     $Gallery = new Gallery($app);
     return $Gallery->exec();
 });
+
