@@ -1,9 +1,9 @@
-{# 
+{#
   FacebookGallery
 
   @author Team phpManufaktur <team@phpmanufaktur.de>
   @link https://kit2.phpmanufaktur.de
-  @link https://github.com/phpManufaktur/kitFramework/wiki  
+  @link https://github.com/phpManufaktur/kitFramework/wiki
   @copyright 2012 Ralf Hertsch <ralf.hertsch@phpmanufaktur.de>
   @license MIT License (MIT) http://www.opensource.org/licenses/MIT
 
@@ -72,9 +72,9 @@
 			$('#thumbScroller').css('width',$(window).width()-padding);
 			sliderWidth=$(window).width()-padding;
 		});
-	</script>	
+	</script>
 {% endblock jquery %}
-{% block content %}  
+{% block content %}
 		<div id="fp_gallery" class="fp_gallery">
       {# preload the first picture from the facebook gallery #}
 			<img src="{{ gallery.data.0.images.0.source }}" alt="" class="fp_preview" style="display:none;"/>
@@ -108,10 +108,10 @@
 			var $btn_next		= $('#fp_next');
 			var $btn_prev		= $('#fp_prev');
 			var $thumbScroller	= $('#thumbScroller');
-				
+
 			//total number of thumbs
 			var nmb_thumbs		= $thumbScroller.find('.content').length;
-				
+
 			//preload thumbs
 			var cnt_thumbs 		= 0;
 			for(var i=0;i<nmb_thumbs;++i){
@@ -123,12 +123,12 @@
             showThumbs(2000);
 				}).attr('src',$thumb.find('img').attr('src'));
 			}
-					
+
 			//make the document scrollable
 			//when the the mouse is moved up/down
 			//the user will be able to see the full image
 			makeScrollable();
-				
+
 			//clicking on a thumb...
 			$thumbScroller.find('.content').bind('click',function(e){
 				var $content= $(this);
@@ -148,10 +148,10 @@
 					'left': pos_left + 'px',
 					'top': pos_top + 'px'
 				}).insertAfter($('BODY'));
-					
+
 				var windowW = $(window).width();
 				var windowH = $(window).height();
-					
+
 				//animate the clone to the center of the page
 				$clone.stop()
 				.animate({
@@ -164,9 +164,9 @@
 					var $theClone 	= $(this);
 					var ratio		= $clone.width()/120;
 					var final_w		= 400*ratio;
-						
+
 					$loader.show();
-						
+
 					//expand the clone when large image is loaded
 					$('<img class="fp_preview"/>').load(function(){
 						var $newimg 		= $(this);
@@ -196,15 +196,15 @@
 				hideThumbs();
 				e.preventDefault();
 			});
-				
+
 			//clicking on the "show thumbs"
 			//displays the thumbs container and hides
 			//the navigation arrows
 			$btn_thumbs.bind('click',function(){
-				showThumbs(500);
+				showThumbs(5000);
 				hideNav();
 			});
-				
+
 			function hideThumbs(){
 				$('#outer_container').stop().animate({'bottom':'-160px'},500);
 				showThumbsBtn();
@@ -214,7 +214,7 @@
 				$('#outer_container').stop().animate({'bottom':'0px'},speed);
 				hideThumbsBtn();
 			}
-				
+
 			function hideThumbsBtn(){
 				$btn_thumbs.stop().animate({'bottom':'-50px'},500);
 			}
@@ -236,7 +236,7 @@
 			//events for navigating through the set of images
 			$btn_next.bind('click',showNext);
 			$btn_prev.bind('click',showPrev);
-			
+
 			//the aim is to load the new image,
 			//place it before the old one and fadeOut the old one
 			//we use the current variable to keep track which
@@ -257,7 +257,7 @@
 					$currImage.fadeOut(2000,function(){$(this).remove();});
 				}).attr('src',$e_next.find('img').attr('alt'));
 			}
-				
+
 			function showPrev(){
 				--current;
 				var $e_next	= $thumbScroller.find('.content:nth-child('+current+')');
@@ -274,7 +274,7 @@
 					$currImage.fadeOut(2000,function(){$(this).remove();});
 				}).attr('src',$e_next.find('img').attr('alt'));
 			}
-				
+
       function makeScrollable(){
 				$(document).bind('mousemove',function(e){
 					var top = (e.pageY - $(document).scrollTop()/2) ;
@@ -282,5 +282,5 @@
         });
 			}
     });
-  </script>   
-{% endblock footer %}        
+  </script>
+{% endblock footer %}
