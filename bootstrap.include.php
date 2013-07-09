@@ -14,6 +14,8 @@ use phpManufaktur\FacebookGallery\Control\Gallery;
 
 // scan the /Locale directory and add all available languages
 $app['utils']->addLanguageFiles(MANUFAKTUR_PATH.'/FacebookGallery/Data/Locale');
+// scan the /Locale/Custom directory and add all available languages
+$app['utils']->addLanguageFiles(MANUFAKTUR_PATH.'/FacebookGallery/Data/Locale/Custom');
 
 $app->post('/command/facebookgallery', function() use ($app) {
     // init basic kitCommand
