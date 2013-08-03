@@ -1,19 +1,19 @@
-{# 
+{#
   FacebookGallery
 
   @author Team phpManufaktur <team@phpmanufaktur.de>
   @link https://kit2.phpmanufaktur.de
-  @link https://github.com/phpManufaktur/kitFramework/wiki  
+  @link https://github.com/phpManufaktur/kitFramework/wiki
   @copyright 2012 Ralf Hertsch <ralf.hertsch@phpmanufaktur.de>
   @license MIT License (MIT) http://www.opensource.org/licenses/MIT
 #}
-{% extends template_file('@phpManufaktur/Basic/Template', 'kitcommand.iframe.body.twig') %}
+{% extends template_file('@phpManufaktur/Basic/Template', 'kitcommand/iframe.body.twig') %}
 {% block title %}{{ 'Facebook Gallery Help'|trans }}{% endblock %}
 {% block description %}{{ 'First Steps and Helpfile for the kitFramework Facebook Gallery'|trans }}{% endblock %}
 {% block stylesheet %}
   {{ parent() }}
   <link rel="stylesheet" type="text/css" href="{{ MANUFAKTUR_URL }}/FacebookGallery/Template/default/css/frontend.css" media="screen, projection" />
-  <link rel="stylesheet" type="text/css" href="{{ MANUFAKTUR_URL }}/FacebookGallery/Template/default/jquery/fancybox/source/jquery.fancybox.css" media="screen, projection" />  
+  <link rel="stylesheet" type="text/css" href="{{ MANUFAKTUR_URL }}/FacebookGallery/Template/default/jquery/fancybox/source/jquery.fancybox.css" media="screen, projection" />
 {% endblock stylesheet %}
 {% block jquery %}
   {{ parent() }}
@@ -39,8 +39,8 @@
         <div class="photo_error">
           {{ 'This photo is not available in size <b>%size%</b>!'|trans({'%size%':parameter.size}) }}
         </div>
-      {% endif %}      
-    </div> 
+      {% endif %}
+    </div>
   {% endfor %}
   <div class="clear"></div>
   {% if gallery.paging is defined %}
@@ -59,9 +59,9 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $(".fancybox").fancybox({
-        
+
       });
     });
-  </script>  
+  </script>
   {{ parent() }}
 {% endblock %}
