@@ -6,6 +6,10 @@ MIT License (MIT) - <http://www.opensource.org/licenses/MIT>
 
 kitFramework - <https://kit2.phpmanufaktur.de>
 
+**0.15** - 2013-08-07
+
+* changed handling of initParameters() in the kitCommand Basic class
+
 **0.14** - 2013-08-07
 
 * added support for proxies
