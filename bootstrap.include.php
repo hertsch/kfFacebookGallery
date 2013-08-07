@@ -9,8 +9,7 @@
  * @license MIT License (MIT) http://www.opensource.org/licenses/MIT
  */
 
-use phpManufaktur\Basic\Control\kitCommand\Basic as kitCommand;
-use phpManufaktur\FacebookGallery\Control\Gallery;
+use phpManufaktur\Basic\Control\kitCommand\Basic as kitCommandBasic;
 
 // scan the /Locale directory and add all available languages
 $app['utils']->addLanguageFiles(MANUFAKTUR_PATH.'/FacebookGallery/Data/Locale');
@@ -19,19 +18,11 @@ $app['utils']->addLanguageFiles(MANUFAKTUR_PATH.'/FacebookGallery/Data/Locale/Cu
 
 $app->post('/command/facebookgallery', function() use ($app) {
     // init basic kitCommand
-    $kitCommand = new kitCommand($app);
-    // get the GET parameters for this route
-    $cmsGET = $kitCommand->getCMSgetParameters();
-    // we need the parameter ID for the CMS handling
-    $parameter_id = isset($cmsGET['parameter_id']) ? $cmsGET['parameter_id'] : $kitCommand->getParameterID();
-    $source = FRAMEWORK_URL."/facebookgallery/exec?pid=$parameter_id";
-    return $kitCommand->createIFrame($source);
+    $kitCommand = new kitCommandBasic($app);
+    return $kitCommand->createIFrame('/facebookgallery/exec');
 })
 ->setOption('info', MANUFAKTUR_PATH.'/FacebookGallery/command.facebookgallery.json');
 
 // execute the general FacebookGallery class
-$app->match('/facebookgallery/exec', function () use ($app) {
-    $Gallery = new Gallery($app);
-    return $Gallery->exec();
-});
+$app->match('/facebookgallery/exec', 'phpManufaktur\FacebookGallery\Control\Gallery::exec');
 
