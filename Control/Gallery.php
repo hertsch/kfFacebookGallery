@@ -111,8 +111,7 @@ class Gallery extends kitCommand {
 
     public function exec(Application $app)
     {
-        $this->app = $app;
-        $this->initParameters();
+        $this->initParameters($app);
 
         try {
             // get the kitCommand parameters
