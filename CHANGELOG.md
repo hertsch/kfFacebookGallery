@@ -6,6 +6,11 @@ MIT License (MIT) - <http://www.opensource.org/licenses/MIT>
 
 kitFramework - <https://kit2.phpmanufaktur.de>
 
+**0.14** - 2013-08-07
+
+* added support for proxies
+* changed some smaller handlings
+
 **0.13** - 2013-07-25
 
 * first public beta release
