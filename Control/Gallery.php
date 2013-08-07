@@ -13,6 +13,7 @@ namespace phpManufaktur\FacebookGallery\Control;
 
 use phpManufaktur\Basic\Control\kitCommand\Basic as kitCommand;
 use phpManufaktur\Basic\Control\kitCommand\Help;
+use Silex\Application;
 
 class Gallery extends kitCommand {
 
@@ -31,10 +32,15 @@ class Gallery extends kitCommand {
         if (!curl_setopt_array($ch, array(
             CURLOPT_URL => 'https://graph.facebook.com/'.$command,
             CURLOPT_USERAGENT => self::USERAGENT,
-            CURLOPT_RETURNTRANSFER => true
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYHOST => false,
+            CURLOPT_SSL_VERIFYPEER => false
         ))) {
             throw new \Exception("Can't set the cURL options!");
         }
+
+        // set proxy if needed
+        $this->app['utils']->setCURLproxy($ch);
 
         if (false === ($content = curl_exec($ch))) {
             $error = curl_error($ch);
@@ -103,8 +109,11 @@ class Gallery extends kitCommand {
             ));
     }
 
-    public function exec()
+    public function exec(Application $app)
     {
+        $this->app = $app;
+        $this->initParameters();
+
         try {
             // get the kitCommand parameters
             $parameter = $this->getCommandParameters();
