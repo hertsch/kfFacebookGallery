@@ -68,8 +68,10 @@ class Gallery extends kitCommand {
         $result = array();
         $info = array();
         $this->execFacebookGraph($command, $result, $info);
-
-        return $this->app['twig']->render($this->app['utils']->templateFile('@phpManufaktur/FacebookGallery/Template', 'gallery.twig', $this->getPreferredTemplateStyle()),
+        return $this->app['twig']->render($this->app['utils']->getTemplateFile(
+            '@phpManufaktur/FacebookGallery/Template',
+            'gallery.twig',
+            $this->getPreferredTemplateStyle()),
             array(
                 'gallery_id' => $gallery_id,
                 'basic' => $this->getBasicSettings(),
@@ -101,7 +103,7 @@ class Gallery extends kitCommand {
                 throw new \Exception(sprintf('[ %d - %s ] %s', $result['error']['code'], $result['error']['type'], $result['error']['message']));
             }
         }
-        return $this->app['twig']->render($this->app['utils']->templateFile('@phpManufaktur/FacebookGallery/Template', 'list.twig', $this->getPreferredTemplateStyle()),
+        return $this->app['twig']->render($this->app['utils']->getTemplateFile('@phpManufaktur/FacebookGallery/Template', 'list.twig', $this->getPreferredTemplateStyle()),
             array(
                 'facebook_id' => $facebook_id,
                 'basic' => $this->getBasicSettings(),
@@ -144,14 +146,14 @@ class Gallery extends kitCommand {
             else {
                 // no parameter set, so get the help function and give a hint for the user
                 $help = new Help($this->app);
-                return $this->app['twig']->render($this->app['utils']->templateFile('@phpManufaktur/FacebookGallery/Template', 'help.twig', $this->getPreferredTemplateStyle()),
+                return $this->app['twig']->render($this->app['utils']->getTemplateFile('@phpManufaktur/FacebookGallery/Template', 'help.twig', $this->getPreferredTemplateStyle()),
                     array(
                         'basic' => $this->getBasicSettings(),
                         'help' => $help->getContent(MANUFAKTUR_PATH.'/FacebookGallery/command.facebookgallery.json')
                     ));
             }
         } catch (\Exception $e) {
-            return $this->app['twig']->render($this->app['utils']->templateFile('@phpManufaktur/FacebookGallery/Template', 'error.twig', $this->getPreferredTemplateStyle()),
+            return $this->app['twig']->render($this->app['utils']->getTemplateFile('@phpManufaktur/FacebookGallery/Template', 'error.twig', $this->getPreferredTemplateStyle()),
                 array(
                     'basic' => $this->getBasicSettings(),
                     'error' => array(
