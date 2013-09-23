@@ -6,27 +6,40 @@
   "vendor":"phpManufaktur",
   "type":"application",
   "path":"\/extension\/phpmanufaktur\/phpManufaktur\/FacebookGallery",
-  "namespace": "phpManufaktur\\FacebookGallery",
+  "namespace":"phpManufaktur\\FacebookGallery",
   "link":{
     "start":"\/facebookgallery\/exec",
     "about":"\/facebookgallery\/about"
   },
-  "release": {
-    "number" : "0.15",
-    "date" : "2013-08-07"
+  "release":{
+    "number":"0.16",
+    "date":"2013-09-23",
+    "status":"pre-release"
   },
-  "description": {
-    "en": {
+  "description":{
+    "en":{
       "title":"FacebookGallery for the kitFramework",
-      "short": "Show Facebook Galleries within the Content Management System",
-      "long": "Very flexible Gallery, which enable to show any public Facebook foto album within a content page of the used CMS.",
-      "url": "https:\/\/kit2.phpmanufaktur.de"
+      "short":"Show Facebook Galleries within the Content Management System",
+      "long":"Very flexible Gallery, which enable to show any public Facebook foto album within a content page of the used CMS.",
+      "url":"https:\/\/kit2.phpmanufaktur.de"
     }
   },
-  "require": {
-    "framework": {
-      "release": "0.21"
+  "require":{
+    "framework":{
+      "release":"0.21"
+    },
+    "extension":{
+        "phpManufaktur":{
+            "Basic":{
+                "release":"0.35"
+            }
+        }
     }
+  },
+  "setup": {
+      "install":"\/admin\/helloworld\/setup",
+      "update":"\/admin\/helloworld\/update",
+      "uninstall":"\/admin\/helloworld\/uninstall"
   },
   "license":"MIT License",
   "download": {
