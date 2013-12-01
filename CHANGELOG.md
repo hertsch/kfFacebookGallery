@@ -6,6 +6,10 @@ MIT License (MIT) - <http://www.opensource.org/licenses/MIT>
 
 kitFramework - <https://kit2.phpmanufaktur.de>
 
+**0.20** - 2013-12-01
+
+* changed description in `extension.json`
+
 **0.19** - 2013-11-09
 
 * changed license information and handling in `extension.json`
