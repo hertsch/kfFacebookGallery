@@ -103,7 +103,8 @@ class Gallery extends kitCommand {
                 throw new \Exception(sprintf('[ %d - %s ] %s', $result['error']['code'], $result['error']['type'], $result['error']['message']));
             }
         }
-        return $this->app['twig']->render($this->app['utils']->getTemplateFile('@phpManufaktur/FacebookGallery/Template', 'list.twig', $this->getPreferredTemplateStyle()),
+        return $this->app['twig']->render($this->app['utils']->getTemplateFile(
+            '@phpManufaktur/FacebookGallery/Template', 'list.twig', $this->getPreferredTemplateStyle()),
             array(
                 'facebook_id' => $facebook_id,
                 'basic' => $this->getBasicSettings(),
