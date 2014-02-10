@@ -6,7 +6,7 @@ MIT License (MIT) - <http://www.opensource.org/licenses/MIT>
 
 kitFramework - <https://kit2.phpmanufaktur.de>
 
-**0.21** -2014-02-10
+**0.22** -2014-02-10
 
 * complete rework of the FacebookGallery Templates. Moved the `fullpage` template to `default`, removed the Fancybox example due possible license restrictions and added the template `lightbox` as additional example.
 

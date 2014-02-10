@@ -19,7 +19,7 @@
   "path":"\/extension\/phpmanufaktur\/phpManufaktur\/FacebookGallery",
   "namespace":"phpManufaktur\\FacebookGallery",
   "release":{
-    "number":"0.21",
+    "number":"0.22",
     "date":"2014-02-10",
     "status":"beta"
   },
@@ -52,7 +52,6 @@
   "setup": {
       "install":"\/admin\/facebookgallery\/setup",
       "update":"\/admin\/facebookgallery\/update"
-  }
   },
   "license": {
     "name":"MIT License",
