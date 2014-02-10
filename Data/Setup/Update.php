@@ -24,7 +24,8 @@ class Update
     {
         $remove = array(
             MANUFAKTUR_PATH.'/FacebookGallery/Template/default/error.twig',
-            MANUFAKTUR_PATH.'/FacebookGallery/Template/default/help.twig'
+            MANUFAKTUR_PATH.'/FacebookGallery/Template/default/help.twig',
+            MANUFAKTUR_PATH.'/FacebookGallery/Template/fullpage'
         );
 
         $app['filesystem']->remove($remove);

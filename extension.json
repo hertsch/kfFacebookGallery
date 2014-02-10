@@ -19,8 +19,8 @@
   "path":"\/extension\/phpmanufaktur\/phpManufaktur\/FacebookGallery",
   "namespace":"phpManufaktur\\FacebookGallery",
   "release":{
-    "number":"0.20",
-    "date":"2013-12-01",
+    "number":"0.21",
+    "date":"2014-02-10",
     "status":"beta"
   },
   "description":{
