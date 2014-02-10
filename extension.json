@@ -21,7 +21,7 @@
   "release":{
     "number":"0.20",
     "date":"2013-12-01",
-    "status":"pre-release"
+    "status":"beta"
   },
   "description":{
     "en":{
@@ -39,20 +39,20 @@
   },
   "require":{
     "framework":{
-      "release":"0.21"
+      "release":"0.27"
     },
     "extension":{
         "phpManufaktur":{
             "Basic":{
-                "release":"0.35"
+                "release":"0.78"
             }
         }
     }
   },
   "setup": {
-      "install":"\/admin\/helloworld\/setup",
-      "update":"\/admin\/helloworld\/update",
-      "uninstall":"\/admin\/helloworld\/uninstall"
+      "install":"\/admin\/facebookgallery\/setup",
+      "update":"\/admin\/facebookgallery\/update"
+  }
   },
   "license": {
     "name":"MIT License",
