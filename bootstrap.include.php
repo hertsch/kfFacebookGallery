@@ -11,11 +11,6 @@
 
 use phpManufaktur\Basic\Control\kitCommand\Basic as kitCommandBasic;
 
-// scan the /Locale directory and add all available languages
-$app['utils']->addLanguageFiles(MANUFAKTUR_PATH.'/FacebookGallery/Data/Locale');
-// scan the /Locale/Custom directory and add all available languages
-$app['utils']->addLanguageFiles(MANUFAKTUR_PATH.'/FacebookGallery/Data/Locale/Custom');
-
 // admin routes
 $app->get('admin/facebookgallery/setup',
     'phpManufaktur\FacebookGallery\Data\Setup\Setup::ControllerSetup');
