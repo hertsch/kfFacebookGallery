@@ -22,7 +22,7 @@
 {% block content %}
   {% if parameter.limit not in [2,3,4,6,8,9,12] %}
      {% include '@phpManufaktur/Basic/Template/default/pattern/bootstrap/alert.twig'
-        with {content:'Allowed values for the parameter "limit" are 2,3,4,6,8,9 and 12 but not %limit%!'|trans({'%limit%':parameter.limit})} only %}
+        with {content:'Allowed values for the parameter <em>limit</em> are 2,3,4,6,8,9 and 12 but not %limit%!'|trans({'%limit%':parameter.limit})} only %}
   {% else %}
     {% if parameter.limit in [2,4] %}
       {% set column = 'col-xs-6' %}
