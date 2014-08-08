@@ -39,8 +39,12 @@ return array(
     => 'Chronik',
   'Hint: This error occur if you try to access protected Facebook galleries, which belong to private account. The kitFramework FacebookGallery does only support galleries which belong to fanpages and public pages.'
     => 'Hinweis: Dieser Fehler tritt auf, wenn Sie versuchen auf geschützte Facebook Galerien zuzugreifen, die zu privaten Zugängen gehören. Die kitFramework FacebookGallery unterstützt ausschließlich Galerien, die zu Fanpages bzw. öffentlichen Seiten gehören.',
+  'kitFramework FacebookGallery is using the Full Page Image Gallery'
+    => 'kitFramework FacebookGallery verwendet die Full Page Image Gallery',
   'The facebook ID <b>%facebook_id%</b> provide the following galleries'
     => 'Die Facebook ID <b>%facebook_id%</b> stellt die folgenden Galerien zur Verfügung',
+  'This image is not available in size %size%, try another size value!'
+    => 'Diese Abbildung ist in der Größe %size% nicht verfügbar, versuchen Sie einen anderen Größenwert!',
   'View Thumbs'
     => 'Vorschaubilder zeigen',
   
