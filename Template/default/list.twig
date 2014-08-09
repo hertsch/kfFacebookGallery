@@ -24,7 +24,7 @@
   {% for gallery in galleries.data %}
     <h4>{{ gallery.name }}</h4>
     <div class="row">
-      <div class="col-xs-3">{{ 'ID'|trans }}</div>
+      <div class="col-xs-3">{{ 'ID'|humanize|trans }}</div>
       <div class="col-xs-9">
         <a href="#" title="{{ 'Copy to clipboard'|trans }}" onclick="javascript:copyToClipboard('{{ gallery.id }}');"><i class="fa fa-files-o"></i></a> {{ gallery.id }}
       </div>
