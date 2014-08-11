@@ -6,6 +6,10 @@ MIT License (MIT) - <http://www.opensource.org/licenses/MIT>
 
 kitFramework - <https://kit2.phpmanufaktur.de>
 
+**0.24** - 2014-08-11
+
+* improved translation handling, added support for i18nEditor
+
 **0.23** - 2014-07-08
 
 * all language files are now loaded by the BASIC extension
