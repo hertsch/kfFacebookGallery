@@ -2,7 +2,7 @@
   FacebookGallery
 
   @author Team phpManufaktur <team@phpmanufaktur.de>
-  @link https://kit2.phpmanufaktur.de
+  @link https://kit2.phpmanufaktur.de/FacebookGallery
   @link https://github.com/phpManufaktur/kitFramework/wiki
   @copyright 2013 Ralf Hertsch <ralf.hertsch@phpmanufaktur.de>
   @license MIT License (MIT) http://www.opensource.org/licenses/MIT
@@ -19,7 +19,7 @@
 }
 .col-xs-3,
 .col-xs-4,
-.col-xs-6 
+.col-xs-6
 {
   margin: 0;
   padding: 0;

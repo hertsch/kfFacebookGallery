@@ -4,7 +4,7 @@
  * kitFramework::FacebookGallery
  *
  * @author Team phpManufaktur <team@phpmanufaktur.de>
- * @link https://kit2.phpmanufaktur.de
+ * @link https://kit2.phpmanufaktur.de/FacebookGallery
  * @copyright 2014 Ralf Hertsch <ralf.hertsch@phpmanufaktur.de>
  * @license MIT License (MIT) http://www.opensource.org/licenses/MIT
  *
@@ -47,5 +47,5 @@ return array(
     => 'Diese Abbildung ist in der Größe %size% nicht verfügbar, versuchen Sie einen anderen Größenwert!',
   'View Thumbs'
     => 'Vorschaubilder zeigen',
-  
+
 );

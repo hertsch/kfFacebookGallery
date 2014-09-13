@@ -2,7 +2,7 @@
   FacebookGallery
 
   @author Team phpManufaktur <team@phpmanufaktur.de>
-  @link https://kit2.phpmanufaktur.de
+  @link https://kit2.phpmanufaktur.de/FacebookGallery
   @link https://github.com/phpManufaktur/kitFramework/wiki
   @copyright 2013 Ralf Hertsch <ralf.hertsch@phpmanufaktur.de>
   @license MIT License (MIT) http://www.opensource.org/licenses/MIT
@@ -33,7 +33,7 @@
     {% else %}
       {# fallback if parameter.limit is not fitting #}
       {% set column = 'col-xs-3' %}
-    {% endif %} 
+    {% endif %}
     <div class="row">
       {% for photo in gallery.data %}
         {% if photo.name is defined %}
@@ -41,14 +41,14 @@
         {% else %}
           {% set title = '' %}
         {% endif %}
-        <div class="{{ column }}">           
+        <div class="{{ column }}">
           {% if photo.images[parameter.size] is defined %}
             <a href="{{ photo.images[0].source }}" data-lightbox="facebook-gallery"><img src="{{ photo.images[parameter.size].source }}" width="{{ photo.images[parameter.size].width }}" height="{{ photo.images[parameter.size].height }}" alt="{{ title }}" title="{{ title }}" /></a>
           {% else %}
             {% include '@phpManufaktur/Basic/Template/default/pattern/bootstrap/alert.twig'
               with {content:'This image is not available in size %size%, try another size value!'|trans({'%size%':parameter.size})} only %}
           {% endif %}
-        </div>    
+        </div>
       {% endfor %}
     </div>
     {% if gallery.paging is defined %}
