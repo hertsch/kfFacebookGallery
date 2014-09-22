@@ -6,6 +6,10 @@ MIT License (MIT) - <http://www.opensource.org/licenses/MIT>
 
 kitFramework - <https://kit2.phpmanufaktur.de>
 
+**0.26** - 2014-09-22
+
+* changed path information for Library *.css and *.js files to `/latest` 
+
 **0.25** - 2014-09-14
 
 * updated `@link` references

@@ -19,8 +19,8 @@
   "path":"\/extension\/phpmanufaktur\/phpManufaktur\/FacebookGallery",
   "namespace":"phpManufaktur\\FacebookGallery",
   "release":{
-    "number":"0.25",
-    "date":"2014-09-14",
+    "number":"0.26",
+    "date":"2014-09-22",
     "status":"beta",
     "changelog":"https:\/\/github.com\/phpManufaktur\/kfFacebookGallery\/blob\/master\/CHANGELOG.md"
   },
