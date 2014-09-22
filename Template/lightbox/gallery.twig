@@ -16,8 +16,8 @@
   {% else %}
     <link rel="stylesheet" type="text/css" href="{{ MANUFAKTUR_URL ~ '/FacebookGallery/Template/default/css/gallery.min.css' }}" media="screen, projection" />
   {% endif %}
-  <link rel="stylesheet" type="text/css" href="{{ LIBRARY_URL ~ '/font-awesome/4.0.3/css/font-awesome.min.css' }}" media="screen, projection" />
-  <link rel="stylesheet" type="text/css" href="{{ LIBRARY_URL ~ '/jquery/lightbox/2.6.0/css/lightbox.css' }}" media="screen, projection" />
+  <link rel="stylesheet" type="text/css" href="{{ LIBRARY_URL ~ '/font-awesome/latest/css/font-awesome.min.css' }}" media="screen, projection" />
+  <link rel="stylesheet" type="text/css" href="{{ LIBRARY_URL ~ '/jquery/lightbox/latest/css/lightbox.css' }}" media="screen, projection" />
 {% endblock stylesheet %}
 {% block content %}
   {% if parameter.limit not in [2,3,4,6,8,9,12] %}
@@ -67,5 +67,5 @@
 {% endblock %}
 {% block footer_jquery %}
   {{ parent() }}
-  <script type="text/javascript" src="{{ LIBRARY_URL }}/jquery/lightbox/2.6.0/js/lightbox-2.6.min.js"></script>
+  <script type="text/javascript" src="{{ LIBRARY_URL }}/jquery/lightbox/latest/js/lightbox.min.js"></script>
 {% endblock footer_jquery %}
